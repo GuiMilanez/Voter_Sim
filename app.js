@@ -63,17 +63,19 @@ const vote = () => {
   for (i = 0; i < voters.length; i++) {
 
     if (voters[i].ideology === 'Neutral') {
-      democrat_candidates[0].votes += .25
-      republican_candidates[0].votes += .25
-      independent_candidates[0].votes += .50
+      democrat_candidates[0] ? democrat_candidates[0].votes += .25 : null
+      republican_candidates[0] ? republican_candidates[0].votes += .25 : null
+      independent_candidates[0] ? independent_candidates[0].votes += .50 : null
     } else if (voters[i].ideology === 'Liberal') {
-      democrat_candidates[0].votes += .60
-      republican_candidates[0].votes += .20
-      independent_candidates[0].votes += .20
+      democrat_candidates[0] ? democrat_candidates[0].votes += .60 : null
+      republican_candidates[0] ? republican_candidates[0].votes += .20 : null
+      independent_candidates[0] ? independent_candidates[0].votes += .20 : null
     } else if (voters[i].ideology === 'Conservative') {
-      democrat_candidates[0].votes += .20
-      republican_candidates[0].votes += .60
-      independent_candidates[0].votes += .20
+      democrat_candidates[0] ? democrat_candidates[0].votes += .20 : null
+      republican_candidates[0] ? republican_candidates[0].votes += .60 : null
+      independent_candidates[0] ? independent_candidates[0].votes += .20 : null
+    } else {
+      
     }
   }
 }
